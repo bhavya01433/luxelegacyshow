@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap'); */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #101014;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes titlePulse {
+  0%, 100% { opacity: 0.8; text-shadow: 0 0 10px rgba(255,220,150,0.2); }
+  50% { opacity: 1; text-shadow: 0 0 18px rgba(255,220,150,0.6); }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
